@@ -18,16 +18,16 @@ Be sure to check out the demo if you are confused.
 CSS
 
 ```css
-    #my-parallax {
-        background: #111 url(../img/1.jpg) no-repeat 0px 0px;
-        background-size: 100% auto;
-    }
+#my-parallax {
+    background: #111 url(../img/1.jpg) no-repeat 0px 0px;
+    background-size: 100% auto;
+}
 ```
 
 HTML
 
 ```html
-    <div id="my-parallax" class="parallax parallax-dark"></div>
+<div id="my-parallax" class="parallax parallax-dark"></div>
 ```
 
 JS
@@ -41,17 +41,17 @@ JS
 HTML
 
 ```html
-    <div id="my-parallax" class="parallax parallax-dark"></div>
+<div id="my-parallax" class="parallax parallax-dark"></div>
 ```
 
 JS
 
 ```js
-    $("#my-parallax").parallax({
-        image : "./demo/img/1.jpg",
-        height : "400",
-        scroll : "default"
-    });
+$("#my-parallax").parallax({
+    image : "./demo/img/1.jpg",
+    height : "400",
+    scroll : "default"
+});
 ```
 
 # Themes
