@@ -72,7 +72,7 @@ $("#my-parallax").parallax({
 });
 ```
 
-JS - Setup
+JS - Manual Scroll
 
 ```js
 $("#my-parallax").parallaxScroll(scrollPosition);
