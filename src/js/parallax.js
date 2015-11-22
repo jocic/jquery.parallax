@@ -1,7 +1,7 @@
 /**************************************************\
 |* Script Author: Djordje Jocic                   *|
 |* Script Year: 2015                              *|
-|* Script Version: 1.0.0                          *|
+|* Script Version: 1.0.1                          *|
 |* Script License: MIT License (MIT)              *|
 |* ============================================== *|
 |* Official Website: http://www.djordjejocic.com/ *|
@@ -38,23 +38,24 @@
 
 function ParallaxRenderer() {
     
-    this.render = function(position, element) {
+    this.render = function(position, element, settings) {
         
-        if (!element.parallaxInit) {
+        if (!settings.parallaxInit) {
             return;
         }
         
-        var ratio  = this.calculateParallaxRatio(position, element.settings.start, element.settings.end);
+        var ratio = this.calculateParallaxRatio(position, settings.start, settings.end);
         
         position -= element.offset().top;
         
-        var newPos = - Math.floor(ratio * element.settings.offset);
+        var newPos = - Math.floor(ratio * settings.offset);
         var bgPos  = this.parsePosition(element.css("background-position"));
         
         bgPos.left += "px";
         bgPos.top  = newPos + "px";
         
         element.css("background-position", bgPos.left + " " + bgPos.top);
+        
     }
     
     this.parseLocation = function(value) {
@@ -137,9 +138,10 @@ function ParallaxRenderer() {
     
     $.fn.parallax = function(settings) {
         
-        var element = $(this);
+        var element         = $(this);
+        var elementSettings = $(this).data("parallaxSettings");
         
-        if (typeof element.parallaxInit === "undefined") {
+        if (typeof elementSettings === "undefined") {
             
             var image     = new Image();
             var preloader = $("<div />", { class : "parallax-preloader", style : "display: none;" });
@@ -155,7 +157,7 @@ function ParallaxRenderer() {
                 
             }
             
-            element.parallaxInit = true;
+            settings.parallaxInit = true;
             
             image.onload = function() {
                 
@@ -163,7 +165,7 @@ function ParallaxRenderer() {
                 
                 settings.offset = $.fn.parallaxCore.renderer.calculateOffset(image, element);
                 
-                element.settings = settings;
+                element.data("parallaxSettings", settings);
                 
                 if (settings.scroll === "default") {
                     
@@ -205,10 +207,14 @@ function ParallaxRenderer() {
             }
             
             if (settings.height == null) {
+                
                 settings.height = element.height();
+                
             }
             else {
+                
                 element.height(settings.height);
+                
             }
             
             settings.start = element.offset().top - $(window).height();
@@ -223,18 +229,18 @@ function ParallaxRenderer() {
     $.fn.parallaxScroll = function(scrollPosition) {
         
         var currentElement  = $(this);
+        var currentSettings = $(this).data("parallaxSettings");
         
-        if (scrollPosition >= currentElement.settings.start && scrollPosition <= currentElement.settings.end) {
+        if (!$.isEmptyObject(currentSettings)) {
             
-            $.fn.parallaxCore.renderer.render(scrollPosition, currentElement);
+            if (scrollPosition >= currentSettings.start && scrollPosition <= currentSettings.end) {
+                
+                $.fn.parallaxCore.renderer.render(scrollPosition, currentElement, currentSettings);
+                
+            }
             
         }
         
-    };
-    
-    // JQuery Parallax Refresh Function (Used When User Resizes Their Browser).
-    
-    $.fn.parallaxRefresh = function(scrollPosition) {
     };
     
     // JQuery Parallax Scroll Event.
@@ -243,14 +249,16 @@ function ParallaxRenderer() {
         
         var scrollPosition  = $(this).scrollTop();
         var currentElement  = null;
+        var currentSettings = null;
         
         for (var i = 0; i < $.fn.parallaxCore.countDefault; i ++) {
             
             currentElement  = $.fn.parallaxCore.scrollDefault[i];
+            currentSettings = $.fn.parallaxCore.scrollDefault[i].data("parallaxSettings");
             
-            if (scrollPosition >= currentElement.settings.start && scrollPosition <= currentElement.settings.end) {
+            if (scrollPosition >= currentSettings.start && scrollPosition <= currentSettings.end) {
                 
-                $.fn.parallaxCore.renderer.render(scrollPosition, currentElement);
+                $.fn.parallaxCore.renderer.render(scrollPosition, currentElement, currentSettings);
                 
             }
             
@@ -267,20 +275,26 @@ function ParallaxRenderer() {
             $.fn.parallaxCore.refreshTimeout = setTimeout(function() { // Recalculating Can Be Done Once Per Second.
                 
                 var currentElement  = null;
+                var currentSettings = null;
                 
                 for (var i = 0; i < $.fn.parallaxCore.countDefault; i ++) {
                     
                     currentElement  = $.fn.parallaxCore.scrollDefault[i];
+                    currentSettings = $.fn.parallaxCore.scrollDefault[i].data("parallaxSettings");
                     
-                    currentElement.settings.start = currentElement.offset().top - $(window).height();
+                    currentSettings.start = currentElement.offset().top - $(window).height();
+                    
+                    $.fn.parallaxCore.scrollDefault[i].data("parallaxSettings", currentSettings);
                 }
                 
                 for (var i = 0; i < $.fn.parallaxCore.countManual; i ++) {
                     
                     currentElement  = $.fn.parallaxCore.scrollManual[i];
+                    currentSettings = $.fn.parallaxCore.scrollManual[i].data("parallaxSettings");
                     
-                    currentElement.settings.start = currentElement.offset().top - $(window).height();
+                    currentSettings.start = currentElement.offset().top - $(window).height();
                     
+                    $.fn.parallaxCore.scrollManual[i].data("parallaxSettings", currentSettings);
                 }
                 
                 $.fn.parallaxCore.refreshTimeout = null;

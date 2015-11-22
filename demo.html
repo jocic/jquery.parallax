@@ -77,6 +77,34 @@
             
         </div>
         
+        <!-- Example 4 Starts Here -->
+        
+        <script type="text/javascript">
+            
+            $(document).ready(function() {
+                
+                $("#example-4").parallax({
+                    image : "./demo/img/4.jpg",
+                    height : "500",
+                    scroll : "manual"
+                });
+                
+            });
+            
+            $(document).scroll(function() {
+                
+                var scrollPosition = $(this).scrollTop();
+                
+                $("#example-4").parallaxScroll(scrollPosition);
+                
+            });
+            
+        </script>
+        
+        <div id="example-4" class="parallax parallax-dark example">
+            
+        </div>
+        
     </body>
     
 </html>
