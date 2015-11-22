@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-gb" id="parallax-demo">
+    
+    <head>
+        
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="Đorđe Jocić (Djordje Jocic)" />
+        
+        <title>Parallax Examples</title>
+        
+        <link href="demo/css/style.css" rel="stylesheet" type="text/css" />
+        
+        <script src="demo/js/jquery.js" type="text/javascript"></script>
+        
+        <link href="src/css/parallax.css" rel="stylesheet" type="text/css" />
+        <script src="src/js/parallax.js" type="text/javascript"></script>
+        
+    </head>
+    
+    <body>
+        
+        <!-- Example 1 Starts Here -->
+        
+        <script type="text/javascript">
+            
+            $(document).ready(function() {
+                
+                $("#example-1").parallax();
+                
+            });
+            
+        </script>
+        
+        <div id="example-1" class="parallax parallax-dark example">
+            
+        </div>
+        
+        <!-- Example 2 Starts Here -->
+        
+        <script type="text/javascript">
+            
+            $(document).ready(function() {
+                
+                $("#example-2").parallax({
+                    image : "./demo/img/2.jpg",
+                    height : "400",
+                    scroll : "default"
+                });
+                
+            });
+            
+        </script>
+        
+        <div id="example-2" class="parallax parallax-dark example">
+            
+        </div>
+
+        <!-- Example 3 Starts Here -->
+        
+        <script type="text/javascript">
+            
+            $(document).ready(function() {
+                
+                $("#example-3").parallax({
+                    image : "./demo/img/3.jpg",
+                    height : "500",
+                    scroll : "default"
+                });
+                
+            });
+            
+        </script>
+        
+        <div id="example-3" class="parallax parallax-dark example">
+            
+        </div>
+        
+    </body>
+    
+</html>
