@@ -12,12 +12,15 @@
 }
 
 .parallax .parallax-preloader {
-    width: 64px;
-    height: 65px;
+    width: 100%;
+    height: 100%;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -32px 0 0 -32px;
+    top: 0px;
+    left: 0px;
+}
+
+.parallax-no-border {
+    border: none !important;
 }
 
 /* Parallax Default */
@@ -29,7 +32,7 @@
 }
 
 .parallax-default .parallax-preloader {
-    background: url(../img/preloader_default.gif) no-repeat center center;
+    background: #f65d96 url(../img/preloader_default.gif) no-repeat center center;
 }
 
 /* Parallax Dark */
@@ -41,7 +44,7 @@
 }
 
 .parallax-dark .parallax-preloader {
-    background: url(../img/preloader_dark.gif) no-repeat center center;
+    background: #111 url(../img/preloader_dark.gif) no-repeat center center;
 }
 
 /* Parallax Light */
@@ -53,5 +56,5 @@
 }
 
 .parallax-light .parallax-preloader {
-    background: url(../img/preloader_light.gif) no-repeat center center;
+    background: #fff url(../img/preloader_light.gif) no-repeat center center;
 }

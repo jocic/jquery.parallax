@@ -1,7 +1,7 @@
 /**************************************************\
 |* Script Author: Djordje Jocic                   *|
 |* Script Year: 2015                              *|
-|* Script Version: 1.0.1                          *|
+|* Script Version: 1.0.2                          *|
 |* Script License: MIT License (MIT)              *|
 |* ============================================== *|
 |* Official Website: http://www.djordjejocic.com/ *|
@@ -56,13 +56,13 @@ function ParallaxRenderer() {
         
         element.css("background-position", bgPos.left + " " + bgPos.top);
         
-    }
+    };
     
     this.parseLocation = function(value) {
         
-        return value.trim().replace(/^((url\()+(`|'|"))/, "").replace(/((`|'|")+(\)))$/, "")
+        return value.trim().replace(/^((url\()+(`|'|"))/, "").replace(/((`|'|")+(\)))$/, "");
         
-    }
+    };
     
     this.parsePosition = function(value) {
         
@@ -78,13 +78,13 @@ function ParallaxRenderer() {
         
         return parsedValue;
         
-    }
+    };
     
     this.clamp = function(value, minValue, maxValue) {
         
         return (value < minValue) ? minValue : (value > maxValue) ? maxValue : value;
         
-    }
+    };
     
     this.calculateOffset = function(image, element) {
         
@@ -102,7 +102,7 @@ function ParallaxRenderer() {
             
         }
         
-    }
+    };
     
     this.calculateParallaxRatio = function(position, start, end) {
         
@@ -113,7 +113,7 @@ function ParallaxRenderer() {
         
         return position / end;
         
-    }
+    };
     
 }
 
