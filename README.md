@@ -1,6 +1,6 @@
-# JQuery Parallax
+# jQuery Parallax
 
-JQuery parallax scrolling library with image preloader and custom scroll function (for those that use custom content scrollers).
+jQuery parallax scrolling library with image preloader and custom scroll function (for those that use custom content scrollers).
 
 # Versioning Scheme
 
@@ -91,5 +91,13 @@ $("#my-parallax").parallaxScroll(scrollPosition);
 Three themes exist:
 
 * .parallax-default - Background (#f65d96)
+
+![Default Theme](demo/img/themes/theme-default.gif)
+
 * .parallax-dark - Background (#111111)
+
+![Dark Theme](demo/img/themes/theme-dark.gif)
+
 * .parallax-light - Background (#ffffff)
+
+![Light Theme](demo/img/themes/theme-light.gif)
