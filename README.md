@@ -90,14 +90,50 @@ $("#my-parallax").parallaxScroll(scrollPosition);
 
 Three themes exist:
 
-* .parallax-default - Background (#f65d96)
+* .parallax-default - main color: #f65d96
+
+Default Theme Example:
+
+```html
+<div id="example" class="parallax parallax-default"></div>
+```
 
 ![Default Theme](demo/img/themes/theme-default.gif)
 
-* .parallax-dark - Background (#111111)
+* .parallax-dark - main color: #111111
+
+Dark Theme Example:
+
+```html
+<div id="example" class="parallax parallax-dark"></div>
+```
 
 ![Dark Theme](demo/img/themes/theme-dark.gif)
 
-* .parallax-light - Background (#ffffff)
+* .parallax-light - main color: #ffffff
+
+Light Theme Example:
+
+```html
+<div id="example" class="parallax parallax-light"></div>
+```
 
 ![Light Theme](demo/img/themes/theme-light.gif)
+
+# Settings
+
+Default library settings are as follow.
+
+```js
+var settings = {
+    image : "./demo/img/1.jpg",
+    height : "400",
+    scroll : "default"
+};
+```
+
+Allowed values are as follow:
+
+* image - String containing image location
+* height - Number containing the needed height, ex. *400* for 400px
+* scroll - String with value *default* for regular scroller or *manual* for custom scroller
