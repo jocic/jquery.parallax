@@ -1,0 +1,233 @@
+/***********************************************************\
+|* Website: https://www.djordjejocic.com                   *|
+|* Author: Djordje Jocic <office@djordjejocic.com>         *|
+|* ------------------------------------------------------- *|
+|* Filename: core.css                                      *|
+|* ------------------------------------------------------- *|
+|* Order of CSS properites is following:                   *|
+|*                                                         *|
+|* 1. background                                           *|
+|* 2. display                                              *|
+|* 3. position                                             *|
+|* 4. width                                                *|
+|* 5. height                                               *|
+|* 6. margin                                               *|
+|* 7. padding                                              *|
+|* 8. font                                                 *|
+|* 9. text                                                 *|
+|* 10. letter                                              *|
+|* 11. color                                               *|
+|* 12. border                                              *|
+|* 13. transitions                                         *|
+|*                                                         *|
+|* Everything else should goes to the bottom.              *|
+|* ------------------------------------------------------- *|
+|* Copyright (C) 2018                                      *|
+\***********************************************************/
+
+/* Document */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #333 url(../images/bg-pattern.png);
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: #cfcfcf;
+}
+
+a {
+    color: #888;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: #888;
+    text-decoration: underline;
+}
+
+/* Pace Customization */
+
+.pace-running {
+    background: #333 url(../images/bg-pattern.png);
+}
+
+.pace-running > *:not(.pace) {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+/* Selection */
+
+::selection {
+    background: #111;
+    color: #fff;
+}
+
+::-webkit-selection {
+    background: #111;
+    color: #fff;
+}
+
+::-moz-selection {
+    background: #111;
+    color: #fff;
+}
+
+/* Nav Pills */
+
+.nav-pills .nav-link {
+    padding: 0.25rem 0.5rem;
+    color: #ccc;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+    background: #111;
+    color: #fff;
+}
+
+/* GitHub Corner */
+
+#github-corner {
+    background: url(../images/github-corner.png);
+    background-size: 130px 130px;
+    display: block;
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    top: 0;
+    right: 0;
+}
+
+/* Header */
+
+#header {
+    background: #222;
+    margin: 0 0 1rem 0;
+    padding: 1.5rem;
+    color: #fff;
+    -webkit-box-shadow: 0 0 5px #111;
+       -moz-box-shadow: 0 0 5px #111;
+            box-shadow: 0 0 5px #111;
+}
+
+#header h1 > i {
+    margin-right: 0.5rem;
+}
+
+/* Content */
+
+#content {
+    margin: 0 0 1rem 0;
+}
+
+#content .section {
+    margin: 0 0 2rem 0;
+}
+
+#content .section-title {
+    border-bottom: 1px solid #ccc;
+}
+
+#content .image-block {
+    margin-bottom: 1rem;
+}
+
+#content .thumbnail-block a {
+    display: block;
+    position: relative;
+    width: auto;
+    height: 150px;
+    overflow: hidden;
+}
+
+#content .thumbnail-block a img {
+    display: block;
+    position: absolute;
+    width: auto;
+    height: auto;
+    min-height: 100%;
+    max-height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+}
+
+#content ul {
+    margin: 0 0 1rem 2rem;
+}
+
+#content .highlighter {
+    margin: 0;
+}
+
+#content .highlighter .hljs {
+    padding: 1rem;
+}
+
+/* Footer */
+
+#footer {
+    background: #222;
+    padding: 0.75rem;
+    text-align: center;
+    color: #fff;
+    -webkit-box-shadow: 0 0 5px #111;
+       -moz-box-shadow: 0 0 5px #111;
+            box-shadow: 0 0 5px #111;
+}
+
+/* Helpers */
+
+.bordered {
+    border: 2px solid #444;
+}
+
+.no-border {
+    border: none;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.no-select {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
+}
+
+.disabled {
+   pointer-events: none;
+   cursor: default;
+}
+
+.clear {
+    clear: both;
+}
+
+/* Example */
+
+.example {
+    margin: 0 0 20px 0;
+}
+
+#example-1 {
+    background: #111 url(../images/samples/1.jpg) no-repeat 0px 0px;
+    background-size: 100% auto;
+    height: 200px;
+}

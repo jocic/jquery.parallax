@@ -1,0 +1,62 @@
+/***********************************************************\
+|* Website: https://www.djordjejocic.com                   *|
+|* Author: Djordje Jocic <office@djordjejocic.com>         *|
+|* ------------------------------------------------------- *|
+|* Filename: core-responsive.css                           *|
+|* ------------------------------------------------------- *|
+|* Order of CSS properites is following:                   *|
+|*                                                         *|
+|* 1. background                                           *|
+|* 2. display                                              *|
+|* 3. position                                             *|
+|* 4. width                                                *|
+|* 5. height                                               *|
+|* 6. margin                                               *|
+|* 7. padding                                              *|
+|* 8. font                                                 *|
+|* 9. text                                                 *|
+|* 10. letter                                              *|
+|* 11. color                                               *|
+|* 12. border                                              *|
+|* 13. transitions                                         *|
+|*                                                         *|
+|* Everything else should goes to the bottom.              *|
+|* ------------------------------------------------------- *|
+|* Copyright (C) 2018                                      *|
+\***********************************************************/
+
+@media(max-width: 1199px) {
+    
+    
+    
+}
+
+@media(max-width: 991px) {
+    
+    
+    
+}
+
+@media(max-width: 767px) {
+    
+    /* GitHub Corner */
+
+    #github-corner {
+        background-size: 70px 70px;
+        width: 70px;
+        height: 70px;
+    }
+    
+    /* Content */
+    
+    #content #left-side {
+        display: none;
+    }
+    
+}
+
+@media(max-width: 575px) {
+    
+    
+    
+}

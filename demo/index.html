@@ -1,108 +1,564 @@
 <!DOCTYPE html>
-<html lang="en-gb" id="parallax-demo">
-    
+<html>
     <head>
         
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <!-- Core Meta Data-->
+        
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="author" content="Đorđe Jocić (Djordje Jocic)" />
         
-        <title>Parallax Examples</title>
+        <!-- SEO Meta Data -->
         
-        <link href="./assets/css/style.css" rel="stylesheet" type="text/css" />
+        <meta name="author" content="Đorđe Jocić (Djordje Jocic)"/>
+        <meta name="description" content="jQuery library for generating beautiful parallax scrolling effect, with image preloader and custom scroll function!" />
+        <meta name="keywords" content="javascript, javascript library, js, js library, jquery, jquery library, parallax, parallax effect, animation" />
         
-        <script src="./assets/js/jquery.js" type="text/javascript"></script>
+        <!-- Icons -->
         
-        <link href="./assets/css/parallax.min.css" rel="stylesheet" type="text/css" />
-        <script src="./assets/js/parallax.min.js" type="text/javascript"></script>
+        <link href="images/favicon.ico?ver=2.0.0" rel="icon" type="image/x-icon"/>
+        <link href="images/icons/57x57.png?ver=2.0.0" rel="apple-touch-icon-precomposed" sizes="57x57" />
+        <link href="images/icons/72x72.png?ver=2.0.0" rel="apple-touch-icon-precomposed" sizes="72x72" />
+        <link href="images/icons/114x114.png?ver=2.0.0" rel="apple-touch-icon-precomposed" sizes="114x114" />
+        <link href="images/icons/144x144.png?ver=2.0.0" rel="apple-touch-icon-precomposed" sizes="144x144" />
+        
+        <!-- jQuery Library -->
+        
+        <script src="libraries/jquery/3.3.1/js/jquery.min.js?ver=2.0.0" type="text/javascript"></script>
+        
+        <!-- Pace Library -->
+        
+        <script src="libraries/pace/0.7.8/js/pace.min.js?ver=2.0.0" type="text/javascript"></script>
+        <link href="libraries/pace/0.7.8/css/black/pace-theme-center-simple.css?ver=2.0.0" rel="stylesheet" type="text/css" />
+        
+        <!-- Bootstrap Library & Dependencies -->
+        
+        <script src="libraries/popper/1.12.9/js/umd/popper.min.js?ver=2.0.0" type="text/javascript"></script>
+        <script src="libraries/bootstrap/4.0.0/js/bootstrap.min.js?ver=2.0.0" type="text/javascript"></script>
+        <link href="libraries/bootstrap/4.0.0/css/bootstrap.min.css?ver=2.0.0" rel="stylesheet" type="text/css" />
+        
+        <!-- Font Awesome Library -->
+        
+        <link href="libraries/font-awesome/4.7.0/css/font-awesome.min.css?ver=2.0.0" rel="stylesheet" type="text/css" />
+        
+        <!-- Lightbox 2 Library -->
+        
+        <script src="libraries/lightbox2/2.10.0/js/lightbox.js?ver=2.0.0" type="text/javascript"></script>
+        <link href="libraries/lightbox2/2.10.0/css/lightbox.css?ver=2.0.0" rel="stylesheet" type="text/css" />
+        
+        <!-- Highlight JS Library -->
+        
+        <script src="libraries/highlight-js/9.12.0/js/highlight.min.js?ver=2.0.0" type="text/javascript"></script>
+        <link href="libraries/highlight-js/9.12.0/css/monokai.css?ver=2.0.0" rel="stylesheet" type="text/css" />
+        
+        <!-- Parallax Library -->
+        
+        <link href="libraries/parallax/1.0.2/css/parallax.min.css?ver=2.0.0" rel="stylesheet" type="text/css" />
+        <script src="libraries/parallax/1.0.2/js/parallax.min.js?ver=2.0.0" type="text/javascript"></script>
+        
+        <!-- Page Styles -->
+        
+        <link href="styles/core.css?ver=2.0.0" rel="stylesheet" type="text/css" />
+        <link href="styles/core-responsive.css?ver=2.0.0" rel="stylesheet" type="text/css" />
+        
+        <!-- Page Scripts -->
+        
+        <script src="scripts/core.js?ver=2.0.0" type="text/javascript"></script>
+        
+        <!-- Unsortable -->
+        
+        <title>jQuery Parallax - jQuery library for generating beautiful parallax scrolling effect, with image preloader and custom scroll function!</title>
+        
+        <!-- Internet Explorer Fix -->
+        
+        <!--[if lt IE 9]>
+            <script src="libraries/html5shiv/3.7.3/js/html5shiv.min.js?ver=2.0.0"></script>
+            <script src="libraries/respond/1.4.2/js/respond.min.js?ver=2.0.0"></script>
+        <![endif]-->
         
     </head>
     
-    <body>
+    <body data-spy="scroll" data-target="#demo-navigator" data-offset="250">
         
-        <!-- Example 1 Starts Here -->
+        <!-- GitHub Corner -->
         
-        <script type="text/javascript">
-            
-            $(document).ready(function() {
-                
-                $("#example-1").parallax();
-                
-            });
-            
-        </script>
+        <a id="github-corner" href="https://github.com/jocic/jQuery.Parallax" target="_blank"></a>
         
-        <div id="example-1" class="parallax parallax-dark example">
-            
+        <!-- Header -->
+        
+        <div id="header">
+            <div class="container">
+                <h1>
+                    <i class="fa fa-file-text-o"></i>
+                    jQuery Parallax
+                </h1>
+                <h2>
+                    Version: 2.0.0
+                </h2>
+            </div>
         </div>
         
-        <!-- Example 2 Starts Here -->
+        <!-- Content -->
         
-        <script type="text/javascript">
-            
-            $(document).ready(function() {
-                
-                $("#example-2").parallax({
-                    image : "./assets/img/2.jpg",
-                    height : "400",
-                    scroll : "default"
-                });
-                
-            });
-            
-        </script>
-        
-        <div id="example-2" class="parallax parallax-dark example">
-            
+        <div id="content">
+            <div class="container">
+                <div class="row">
+                    
+                    <!-- Left Side -->
+                    
+                    <div id="left-side" class="col-md-3">
+                        <div class="side-wrapper sticky-top pt-3">
+                            <ul id="demo-navigator" class="nav nav-pills flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#introduction-section">
+                                        <span class="ml-0">Introduction</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#examples-section">
+                                        <span class="ml-0">Examples</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#example-1-section">
+                                        <span class="ml-3">Without Parameters</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#example-2-section">
+                                        <span class="ml-3">With Parameters</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#example-3-section">
+                                        <span class="ml-3">Manual Scroll</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#example-4-section">
+                                        <span class="ml-3">Different Themes</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#support-section">
+                                        <span class="ml-0">Support</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Side -->
+                    
+                    <div id="right-side" class="col-md-9">
+                        <div class="side-wrapper pt-3">
+                            
+                            <!-- Introduction Section -->
+                            
+                            <div id="introduction-section" class="section">
+                                
+                                <!-- Section Chapter -->
+                                
+                                <div class="section-chapter">
+                                    <h3 class="section-title">
+                                        Introduction
+                                    </h3>
+                                    <div class="section-block">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <p>
+                                                    jQuery Parllax library is an open-source library for generating beautiful parallax effect with a few lines of JavaScript. What differentiates it from other similar libraries is that it comes with an image preloader and a custom scroll function - which is especially useful for those that use custom content scrollers.
+                                                </p>
+                                                <div class="image-block">
+                                                    <div class="image">
+                                                        <a href="images/javascript.jpg" data-lightbox="group-1" data-title="jQuery Library">
+                                                            <img class="bordered rounded img-fluid" src="images/javascript.jpg" alt="jQuery Library" />
+                                                        </a>
+                                                    </div>
+                                                    <div class="image-details">
+                                                        <span class="badge badge-secondary">jQuery Library</span>
+                                                    </div>
+                                                </div>
+                                                <p>
+                                                    While the library required jQuery before, it was restructured to support pure Vanilla JS implementation. Comprehensive examples can be found bellow.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <!-- Usage Section -->
+                            
+                            <div id="examples-section" class="section">
+                                
+                                <!-- Section Chapter -->
+                                
+                                <div class="section-chapter">
+                                    <h3 class="section-title">
+                                        Examples
+                                    </h3>
+                                    <div class="section-block">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <p>
+                                                    You will find several examples with the code bellow. However, you should keep in mind that all Parallax instances have following initial settings:
+                                                </p>
+                                                <pre class="highlighter">
+                                                    <code class="javascript">
+var settings = {
+    image : "./demo/img/1.jpg",
+    height : "400",
+    scroll : "default"
+};
+                                                    </code>
+                                                </pre>
+                                                <p>Allowed parameters are:</p>
+                                                <ul>
+                                                    <li><strong>image</strong> - String containing image location.</li>
+                                                    <li><strong>height</strong> - Number representing required height of the parallax window.</li>
+                                                    <li><strong>scroll</strong> - Scroll type, either <em>default</em> or <em>custom</em>.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <!-- Example 1 Section -->
+                            
+                            <div id="example-1-section" class="section">
+                                
+                                <!-- Section Chapter -->
+                                
+                                <div class="section-chapter">
+                                    <h3 class="section-title">
+                                        Without Parameters
+                                    </h3>
+                                    <div class="section-block">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                
+                                                <!-- Example -->
+                                                
+                                                <div id="example-1" class="parallax parallax-dark example"></div>
+                                                
+                                                <!-- JS Code -->
+                                                
+                                                <div class="js-code code-example">
+                                                    JavaScript
+                                                    <pre class="highlighter">
+                                                        <code class="javascript">
+$(&#x22;#my-parallax&#x22;).parallax();
+                                                        </code>
+                                                    </pre>
+                                                </div>
+                                                
+                                                <!-- CSS Code -->
+                                                
+                                                <div class="css-code code-example">
+                                                    CSS
+                                                    <pre class="highlighter">
+                                                        <code class="css">
+#my-parallax {
+    background: #111 url(images/my-image.jpg) no-repeat 0px 0px;
+    background-size: 100% auto;
+    height: 200px;
+}
+                                                        </code>
+                                                    </pre>
+                                                </div>
+                                                
+                                                <!-- HTML Code -->
+                                                
+                                                <div class="html-code code-example">
+                                                    HTML
+                                                    <pre class="highlighter">
+                                                        <code class="html">
+&#x3C;div id=&#x22;my-parallax&#x22; class=&#x22;parallax parallax-dark&#x22;&#x3E;&#x3C;/div&#x3E;
+                                                        </code>
+                                                    </pre>
+                                                </div>
+                                                
+                                                <!-- Paragraph -->
+                                                
+                                                <p>This example is the most complicated one, but it may be useful to people that want to manage Parallax window using CSS and CSS only.</p>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <!-- Example 2 Section -->
+                            
+                            <div id="example-2-section" class="section">
+                                
+                                <!-- Section Chapter -->
+                                
+                                <div class="section-chapter">
+                                    <h3 class="section-title">
+                                        With Parameters
+                                    </h3>
+                                    <div class="section-block">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                
+                                                <!-- Example -->
+                                                
+                                                <div id="example-2" class="parallax parallax-dark example"></div>
+                                                
+                                                <!-- JS Code -->
+                                                
+                                                <div class="js-code code-example">
+                                                    JavaScript
+                                                    <pre class="highlighter">
+                                                        <code class="javascript">
+$(&#x22;#my-parallax&#x22;).parallax({
+    image : "images/my-image.jpg",
+    height : "200",
+    scroll : "default"
+});
+                                                        </code>
+                                                    </pre>
+                                                </div>
+                                                
+                                                <!-- HTML Code -->
+                                                
+                                                <div class="html-code code-example">
+                                                    HTML
+                                                    <pre class="highlighter">
+                                                        <code class="html">
+&#x3C;div id=&#x22;my-parallax&#x22; class=&#x22;parallax parallax-dark&#x22;&#x3E;&#x3C;/div&#x3E;
+                                                        </code>
+                                                    </pre>
+                                                </div>
+                                                
+                                                <!-- Paragraph -->
+                                                
+                                                <p>This example is for people that want a quick and easy implementation.</p>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <!-- Example 3 Section -->
+                            
+                            <div id="example-3-section" class="section">
+                                
+                                <!-- Section Chapter -->
+                                
+                                <div class="section-chapter">
+                                    <h3 class="section-title">
+                                        Manual Scroll
+                                    </h3>
+                                    <div class="section-block">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                
+                                                <!-- Example -->
+                                                
+                                                <div id="example-3" class="parallax parallax-dark example"></div>
+                                                
+                                                <!-- JS Initialization Code -->
+                                                
+                                                <div class="js-setup-code code-example">
+                                                    JavaScript - Setup
+                                                    <pre class="highlighter">
+                                                        <code class="javascript">
+$(&#x22;#my-parallax&#x22;).parallax({
+    image : "images/my-image.jpg",
+    height : "200",
+    scroll : "manual"
+});
+                                                        </code>
+                                                    </pre>
+                                                </div>
+                                                
+                                                <!-- JS Scroll Code -->
+                                                
+                                                <div class="js-scroll-code code-example">
+                                                    JavaScript - Scroll
+                                                    <pre class="highlighter">
+                                                        <code class="javascript">
+$(document).scroll(function() {
+    
+    var scrollPosition = $(this).scrollTop();
+    
+    $(&#x22;#example-3&#x22;).parallaxScroll(scrollPosition);
+    
+});
+                                                        </code>
+                                                    </pre>
+                                                </div>
+                                                
+                                                <!-- HTML Code -->
+                                                
+                                                <div class="html-code code-example">
+                                                    HTML
+                                                    <pre class="highlighter">
+                                                        <code class="html">
+&#x3C;div id=&#x22;my-parallax&#x22; class=&#x22;parallax parallax-dark&#x22;&#x3E;&#x3C;/div&#x3E;
+                                                        </code>
+                                                    </pre>
+                                                </div>
+                                                
+                                                <!-- Paragraph -->
+                                                
+                                                <p>This example demonstrates the usage of <strong>parallaxScroll</strong> function which may be especially useful to people with custom scrollers on their websites.</p>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <!-- Example 4 Section -->
+                            
+                            <div id="example-4-section" class="section">
+                                
+                                <!-- Section Chapter -->
+                                
+                                <div class="section-chapter">
+                                    <h3 class="section-title">
+                                        Different Themes
+                                    </h3>
+                                    <div class="section-block">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                
+                                                <!-- Paragraph -->
+                                                
+                                                <p>Several themes exist that you can use out of the box.</p>
+                                                
+                                                <!-- Default Theme -->
+                                                
+                                                <p>Default theme with background <strong>#F65D96</strong> activated using <strong>parallax-default</strong> class.</p>
+                                                
+                                                <div class="default-theme theme">
+                                                    <img src="images/themes/dark.gif" alt="Default Theme" />
+                                                </div>
+                                                
+                                                <div class="html-code code-example">
+                                                    <pre class="highlighter">
+                                                        <code class="html">
+&#x3C;div id=&#x22;my-parallax&#x22; class=&#x22;parallax parallax-default&#x22;&#x3E;&#x3C;/div&#x3E;
+                                                        </code>
+                                                    </pre>
+                                                </div>
+                                                
+                                                <!-- Dark Theme -->
+                                                
+                                                <p>Dark theme with background <strong>#111111</strong> activated using <strong>parallax-dark</strong> class.</p>
+                                                
+                                                <div class="dark-theme theme">
+                                                    <img src="images/themes/dark.gif" alt="Dark Theme" />
+                                                </div>
+                                                
+                                                <div class="html-code code-example">
+                                                    <pre class="highlighter">
+                                                        <code class="html">
+&#x3C;div id=&#x22;my-parallax&#x22; class=&#x22;parallax parallax-dark&#x22;&#x3E;&#x3C;/div&#x3E;
+                                                        </code>
+                                                    </pre>
+                                                </div>
+                                                
+                                                <!-- Light Theme -->
+                                                
+                                                <p>Light theme with background <strong>#FFFFFF</strong> activated using <strong>parallax-light</strong> class.</p>
+                                                
+                                                <div class="light-theme theme">
+                                                    <img src="images/themes/dark.gif" alt="Light Theme" />
+                                                </div>
+                                                
+                                                <div class="html-code code-example">
+                                                    <pre class="highlighter">
+                                                        <code class="html">
+&#x3C;div id=&#x22;my-parallax&#x22; class=&#x22;parallax parallax-light&#x22;&#x3E;&#x3C;/div&#x3E;
+                                                        </code>
+                                                    </pre>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <!-- Support Section -->
+                            
+                            <div id="support-section" class="section">
+                                
+                                <!-- Section Chapter -->
+                                
+                                <div class="section-chapter">
+                                    <h3 class="section-title">
+                                        Support
+                                    </h3>
+                                    <div class="section-block">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <p>
+                                                    If you encounter any issues while using the library, please don't hesitate to let me know. Any reported issue will be fixed as soon as possible, and you'll be notified immediately afterwards - via your preferred contact method.
+                                                </p>
+                                                <div class="image-block">
+                                                    <div class="image">
+                                                        <a href="images/support.jpg" data-lightbox="group-29" data-title="Support">
+                                                            <img class="bordered rounded img-fluid" src="images/support.jpg" alt="Support" />
+                                                        </a>
+                                                    </div>
+                                                    <div class="image-details">
+                                                        <span class="badge badge-secondary">Support</span>
+                                                    </div>
+                                                </div>
+                                                <p>
+                                                    There are several ways you can contact me:
+                                                </p>
+                                                <ul>
+                                                    <li>Email Address</li>
+                                                    <li>GitHub</li>
+                                                    <li>Twitter</li>
+                                                </ul>
+                                                <p>
+                                                    For general or business inquires, please use the following email address: <a href="mailto:office@djordjejocic.com?subject=General%20or%20Business%20Inquiry%20(jQuery%20Parallax)" target="_top">office@djordjejocic.com</a>
+                                                </p>
+                                                <p>
+                                                    For support inquires, please use the following email address: <a href="mailto:support@djordjejocic.com?subject=Support%20Inquiry%20(jQuery%20Parallax)" target="_top">support@djordjejocic.com</a>
+                                                </p>
+                                                <p>
+                                                    Additionally you can submit an issue over GitHub by clicking <a href="https://github.com/jocic/jQuery.Parallax/issues" target="_blank">here</a>.
+                                                </p>
+                                                <p>
+                                                    And you can follow me on Twitter to get notifications regarding the updates by clicking <a href="https://twitter.com/jocic_91" target="_blank">here</a>.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
         </div>
         
-        <!-- Example 3 Starts Here -->
+        <!-- Footer -->
         
-        <script type="text/javascript">
-            
-            $(document).ready(function() {
-                
-                $("#example-3").parallax({
-                    image : "./assets/img/3.jpg",
-                    height : "500",
-                    scroll : "default"
-                });
-                
-            });
-            
-        </script>
-        
-        <div id="example-3" class="parallax parallax-dark example">
-            
-        </div>
-        
-        <!-- Example 4 Starts Here -->
-        
-        <script type="text/javascript">
-            
-            $(document).ready(function() {
-                
-                $("#example-4").parallax({
-                    image : "./assets/img/4.jpg",
-                    height : "500",
-                    scroll : "manual"
-                });
-                
-            });
-            
-            $(document).scroll(function() {
-                
-                var scrollPosition = $(this).scrollTop();
-                
-                $("#example-4").parallaxScroll(scrollPosition);
-                
-            });
-            
-        </script>
-        
-        <div id="example-4" class="parallax parallax-dark example">
-            
+        <div id="footer">
+            <div class="container">
+                &copy; Djordje Jocic 2018 All rights reserved.
+            </div>
         </div>
         
     </body>

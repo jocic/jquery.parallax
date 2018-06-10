@@ -1,0 +1,60 @@
+/**************************************************\
+|* Style Author: Djordje Jocic                    *|
+|* Style Year: 2015                               *|
+|* Official Website: http://www.djordjejocic.com/ *|
+\**************************************************/
+
+/* Core */
+
+.parallax {
+    position: relative;
+    height: 500px;
+}
+
+.parallax .parallax-preloader {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.parallax-no-border {
+    border: none !important;
+}
+
+/* Parallax Default */
+
+.parallax-default {
+    background: #f65d96;
+    border-top: 1px solid #822246;
+    border-bottom: 1px solid #822246;
+}
+
+.parallax-default .parallax-preloader {
+    background: #f65d96 url(../img/preloader_default.gif) no-repeat center center;
+}
+
+/* Parallax Dark */
+
+.parallax-dark {
+    background: #111;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+
+.parallax-dark .parallax-preloader {
+    background: #111 url(../img/preloader_dark.gif) no-repeat center center;
+}
+
+/* Parallax Light */
+
+.parallax-light {
+    background: #fff;
+    border-top: 1px solid #5d67f6;
+    border-bottom: 1px solid #5d67f6;
+}
+
+.parallax-light .parallax-preloader {
+    background: #fff url(../img/preloader_light.gif) no-repeat center center;
+}
