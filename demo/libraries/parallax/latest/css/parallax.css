@@ -1,46 +1,179 @@
-/**************************************************\
-|* Style Author: Djordje Jocic                    *|
-|* Style Year: 2015                               *|
-|* Official Website: http://www.djordjejocic.com/ *|
-\**************************************************/
-/* Core */
+/***********************************************************\
+|* Website: https://www.djordjejocic.com                   *|
+|* Author: Djordje Jocic <office@djordjejocic.com>         *|
+|* ------------------------------------------------------- *|
+|* Filename: core.scss                                     *|
+|* ------------------------------------------------------- *|
+|* Order of CSS properites is following:                   *|
+|*                                                         *|
+|* 1. background                                           *|
+|* 2. display                                              *|
+|* 3. position                                             *|
+|* 4. width                                                *|
+|* 5. height                                               *|
+|* 6. margin                                               *|
+|* 7. padding                                              *|
+|* 8. font                                                 *|
+|* 9. text                                                 *|
+|* 10. letter                                              *|
+|* 11. color                                               *|
+|* 12. border                                              *|
+|* 13. transitions                                         *|
+|*                                                         *|
+|* Everything else should goes to the bottom.              *|
+|* ------------------------------------------------------- *|
+|* Copyright (C) 2018                                      *|
+\***********************************************************/
+/* Wrapper */
 .parallax {
   position: relative;
-  height: 500px; }
+  height: 300px;
+  /* Preloader */ }
+  .parallax .parallax-preloader {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px; }
 
-.parallax .parallax-preloader {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0px;
-  left: 0px; }
+/***********************************************************\
+|* Website: https://www.djordjejocic.com                   *|
+|* Author: Djordje Jocic <office@djordjejocic.com>         *|
+|* ------------------------------------------------------- *|
+|* Filename: tweaks.scss                                   *|
+|* ------------------------------------------------------- *|
+|* Order of CSS properites is following:                   *|
+|*                                                         *|
+|* 1. background                                           *|
+|* 2. display                                              *|
+|* 3. position                                             *|
+|* 4. width                                                *|
+|* 5. height                                               *|
+|* 6. margin                                               *|
+|* 7. padding                                              *|
+|* 8. font                                                 *|
+|* 9. text                                                 *|
+|* 10. letter                                              *|
+|* 11. color                                               *|
+|* 12. border                                              *|
+|* 13. transitions                                         *|
+|*                                                         *|
+|* Everything else should goes to the bottom.              *|
+|* ------------------------------------------------------- *|
+|* Copyright (C) 2018                                      *|
+\***********************************************************/
+/* Wrapper */
+.parallax {
+  /* No Border */
+  /* With Shadow */ }
+  .parallax.parallax-no-border {
+    border: none !important; }
+  .parallax.parallax-with-shadow {
+    -webkit-box-shadow: 0 0 50px #666 inset;
+    -moz-box-shadow: 0 0 50px #666 inset;
+    box-shadow: 0 0 50px #666 inset; }
 
-.parallax-no-border {
-  border: none !important; }
-
-/* Parallax Default */
-.parallax-default {
-  background: #f65d96;
-  border-top: 1px solid #822246;
-  border-bottom: 1px solid #822246; }
-
-.parallax-default .parallax-preloader {
-  background: #f65d96 url(../images/preloader-default.gif) no-repeat center center; }
-
-/* Parallax Dark */
-.parallax-dark {
+/***********************************************************\
+|* Website: https://www.djordjejocic.com                   *|
+|* Author: Djordje Jocic <office@djordjejocic.com>         *|
+|* ------------------------------------------------------- *|
+|* Filename: dark.scss                                     *|
+|* ------------------------------------------------------- *|
+|* Order of CSS properites is following:                   *|
+|*                                                         *|
+|* 1. background                                           *|
+|* 2. display                                              *|
+|* 3. position                                             *|
+|* 4. width                                                *|
+|* 5. height                                               *|
+|* 6. margin                                               *|
+|* 7. padding                                              *|
+|* 8. font                                                 *|
+|* 9. text                                                 *|
+|* 10. letter                                              *|
+|* 11. color                                               *|
+|* 12. border                                              *|
+|* 13. transitions                                         *|
+|*                                                         *|
+|* Everything else should goes to the bottom.              *|
+|* ------------------------------------------------------- *|
+|* Copyright (C) 2018                                      *|
+\***********************************************************/
+/* Wrapper */
+.parallax.parallax-dark {
   background: #111;
   border-top: 1px solid #333;
-  border-bottom: 1px solid #333; }
+  border-bottom: 1px solid #333;
+  /* Preloader */ }
+  .parallax.parallax-dark .parallax-preloader {
+    background: #111 url(../images/preloader-dark.gif) no-repeat center center; }
 
-.parallax-dark .parallax-preloader {
-  background: #111 url(../images/preloader-dark.gif) no-repeat center center; }
+/***********************************************************\
+|* Website: https://www.djordjejocic.com                   *|
+|* Author: Djordje Jocic <office@djordjejocic.com>         *|
+|* ------------------------------------------------------- *|
+|* Filename: default.scss                                  *|
+|* ------------------------------------------------------- *|
+|* Order of CSS properites is following:                   *|
+|*                                                         *|
+|* 1. background                                           *|
+|* 2. display                                              *|
+|* 3. position                                             *|
+|* 4. width                                                *|
+|* 5. height                                               *|
+|* 6. margin                                               *|
+|* 7. padding                                              *|
+|* 8. font                                                 *|
+|* 9. text                                                 *|
+|* 10. letter                                              *|
+|* 11. color                                               *|
+|* 12. border                                              *|
+|* 13. transitions                                         *|
+|*                                                         *|
+|* Everything else should goes to the bottom.              *|
+|* ------------------------------------------------------- *|
+|* Copyright (C) 2018                                      *|
+\***********************************************************/
+/* Wrapper */
+.parallax.parallax-light {
+  background: #f65d96;
+  border-top: 1px solid #822246;
+  border-bottom: 1px solid #822246;
+  /* Preloader */ }
+  .parallax.parallax-light .parallax-preloader {
+    background: #f65d96 url(../images/preloader-default.gif) no-repeat center center; }
 
-/* Parallax Light */
-.parallax-light {
+/***********************************************************\
+|* Website: https://www.djordjejocic.com                   *|
+|* Author: Djordje Jocic <office@djordjejocic.com>         *|
+|* ------------------------------------------------------- *|
+|* Filename: light.scss                                    *|
+|* ------------------------------------------------------- *|
+|* Order of CSS properites is following:                   *|
+|*                                                         *|
+|* 1. background                                           *|
+|* 2. display                                              *|
+|* 3. position                                             *|
+|* 4. width                                                *|
+|* 5. height                                               *|
+|* 6. margin                                               *|
+|* 7. padding                                              *|
+|* 8. font                                                 *|
+|* 9. text                                                 *|
+|* 10. letter                                              *|
+|* 11. color                                               *|
+|* 12. border                                              *|
+|* 13. transitions                                         *|
+|*                                                         *|
+|* Everything else should goes to the bottom.              *|
+|* ------------------------------------------------------- *|
+|* Copyright (C) 2018                                      *|
+\***********************************************************/
+/* Wrapper */
+.parallax.parallax-light {
   background: #fff;
   border-top: 1px solid #5d67f6;
-  border-bottom: 1px solid #5d67f6; }
-
-.parallax-light .parallax-preloader {
-  background: #fff url(../images/preloader-light.gif) no-repeat center center; }
+  border-bottom: 1px solid #5d67f6;
+  /* Preloader */ }
+  .parallax.parallax-light .parallax-preloader {
+    background: #fff url(../images/preloader-light.gif) no-repeat center center; }

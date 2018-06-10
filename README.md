@@ -58,7 +58,7 @@ JS
 
 ```js
 $("#my-parallax").parallax({
-    image : "./demo/img/1.jpg",
+    image  : "./demo/img/1.jpg",
     height : "400",
     scroll : "default"
 });
@@ -76,7 +76,7 @@ JS - Setup
 
 ```js
 $("#my-parallax").parallax({
-    image : "./demo/img/1.jpg",
+    image  : "./demo/img/1.jpg",
     height : "400",
     scroll : "manual"
 });
@@ -128,7 +128,7 @@ Default library settings are as follow.
 
 ```js
 var settings = {
-    image : "",
+    image  : "",
     height : "400",
     scroll : "default"
 };

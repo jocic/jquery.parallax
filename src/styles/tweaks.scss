@@ -1,0 +1,45 @@
+/***********************************************************\
+|* Website: https://www.djordjejocic.com                   *|
+|* Author: Djordje Jocic <office@djordjejocic.com>         *|
+|* ------------------------------------------------------- *|
+|* Filename: tweaks.scss                                   *|
+|* ------------------------------------------------------- *|
+|* Order of CSS properites is following:                   *|
+|*                                                         *|
+|* 1. background                                           *|
+|* 2. display                                              *|
+|* 3. position                                             *|
+|* 4. width                                                *|
+|* 5. height                                               *|
+|* 6. margin                                               *|
+|* 7. padding                                              *|
+|* 8. font                                                 *|
+|* 9. text                                                 *|
+|* 10. letter                                              *|
+|* 11. color                                               *|
+|* 12. border                                              *|
+|* 13. transitions                                         *|
+|*                                                         *|
+|* Everything else should goes to the bottom.              *|
+|* ------------------------------------------------------- *|
+|* Copyright (C) 2018                                      *|
+\***********************************************************/
+
+/* Wrapper */
+
+.parallax {
+    
+    /* No Border */
+    
+    &.parallax-no-border {
+        border: none !important;
+    }
+    
+    /* With Shadow */
+    
+    &.parallax-with-shadow {
+        -webkit-box-shadow: 0 0 50px #666 inset;
+           -moz-box-shadow: 0 0 50px #666 inset;
+                box-shadow: 0 0 50px #666 inset;
+    }
+}

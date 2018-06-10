@@ -51,6 +51,10 @@ a:focus {
     text-decoration: underline;
 }
 
+hr {
+    border-color: #222;
+}
+
 /* Pace Customization */
 
 .pace-running {

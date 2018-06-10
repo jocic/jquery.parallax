@@ -1,0 +1,40 @@
+/***********************************************************\
+|* Website: https://www.djordjejocic.com                   *|
+|* Author: Djordje Jocic <office@djordjejocic.com>         *|
+|* ------------------------------------------------------- *|
+|* Filename: light.scss                                    *|
+|* ------------------------------------------------------- *|
+|* Order of CSS properites is following:                   *|
+|*                                                         *|
+|* 1. background                                           *|
+|* 2. display                                              *|
+|* 3. position                                             *|
+|* 4. width                                                *|
+|* 5. height                                               *|
+|* 6. margin                                               *|
+|* 7. padding                                              *|
+|* 8. font                                                 *|
+|* 9. text                                                 *|
+|* 10. letter                                              *|
+|* 11. color                                               *|
+|* 12. border                                              *|
+|* 13. transitions                                         *|
+|*                                                         *|
+|* Everything else should goes to the bottom.              *|
+|* ------------------------------------------------------- *|
+|* Copyright (C) 2018                                      *|
+\***********************************************************/
+
+/* Wrapper */
+
+.parallax.parallax-light {
+    background: #fff;
+    border-top: 1px solid #5d67f6;
+    border-bottom: 1px solid #5d67f6;
+    
+    /* Preloader */
+    
+    .parallax-preloader {
+        background: #fff url(../images/preloader-light.gif) no-repeat center center;
+    }
+}
