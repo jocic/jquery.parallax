@@ -13,6 +13,36 @@
 
 $(document).ready(function() {
     
+    // Enable Scroller.
+    
+    $(document).scroll(function() {
+        
+        // Core Variables.
+        
+        var position = $("html, body").scrollTop();
+        var scroller = $("#scroller");
+        
+        // Logic.
+        
+        if (position > 100) {
+            scroller.fadeIn();
+        }
+        else {
+            scroller.fadeOut();
+        }
+        
+    });
+    
+    $(document).scroll();
+    
+    $("#scroller").click(function() {
+        
+        $("html, body").stop().animate({
+            scrollTop : 0
+        });
+        
+    });
+    
     // Highlight Code.
     
     $("pre.highlighter code").each(function(blockIndex, blockValue) {

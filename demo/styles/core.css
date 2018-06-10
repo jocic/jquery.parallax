@@ -176,6 +176,11 @@ a:focus {
     padding: 1rem;
 }
 
+#content .theme img {
+    width: auto;
+    max-width: 100%;
+}
+
 /* Footer */
 
 #footer {
@@ -186,6 +191,28 @@ a:focus {
     -webkit-box-shadow: 0 0 5px #111;
        -moz-box-shadow: 0 0 5px #111;
             box-shadow: 0 0 5px #111;
+}
+
+/* Scroller */
+
+#scroller {
+    background: #222;
+    position: fixed;
+    padding: 0.5rem 1.5rem 0.75rem 1.5rem;
+    font-size: 2rem;
+    color: #fff;
+    -webkit-box-shadow: 0 0 5px #111;
+       -moz-box-shadow: 0 0 5px #111;
+            box-shadow: 0 0 5px #111;
+    right: 3rem;
+    bottom: 5.75rem;
+    cursor: pointer;
+}
+
+#scroller:hover {
+    -webkit-box-shadow: 0 0 5px #444;
+       -moz-box-shadow: 0 0 5px #444;
+            box-shadow: 0 0 5px #444;
 }
 
 /* Helpers */

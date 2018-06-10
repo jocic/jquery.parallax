@@ -53,6 +53,18 @@
         display: none;
     }
     
+    /* Scroller */
+    
+    #scroller {
+        padding: 0.25rem;
+        font-size: 1rem;
+        text-align: center;
+        color: #fff;
+        right: 1rem;
+        bottom: 3.75rem;
+        left: 1rem;
+    }
+    
 }
 
 @media(max-width: 575px) {
