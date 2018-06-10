@@ -42,6 +42,15 @@ gulp.task("build:compile", [
     "build:compile:resources"
 ]);
 
+/***********************\
+|* Task: Build License *|
+\***********************/
+
+gulp.task("build:license", [
+    "build:license:scripts",
+    "build:license:styles"
+]);
+
 /*********************\
 |* Task: Build Watch *|
 \*********************/
@@ -156,5 +165,41 @@ gulp.task("build:compile:resources", function() {
     .pipe(browserSync.reload({
         stream : true
     }));
+    
+});
+
+/*******************************\
+|* Task: Build License Scripts *|
+\*******************************/
+
+gulp.task("build:license:scripts", function() {
+    
+    // Append License To Minified Version.
+    
+    gulp.src([
+        "../src/texts/js-license.txt",
+        "../dist/js/parallax.min.js"
+    ])
+    .pipe(concatenate("parallax.min.js"))
+    .pipe(gulp.dest("../dist/js"))
+    .pipe(gulp.dest("../demo/libraries/parallax/latest/js"))
+    
+});
+
+/******************************\
+|* Task: Build License Styles *|
+\******************************/
+
+gulp.task("build:license:styles", function() {
+    
+    // Append License To Minified Version.
+    
+    gulp.src([
+        "../src/texts/css-license.txt",
+        "../dist/css/parallax.min.css"
+    ])
+    .pipe(concatenate("parallax.min.css"))
+    .pipe(gulp.dest("../dist/css"))
+    .pipe(gulp.dest("../demo/libraries/parallax/latest/css"))
     
 });
