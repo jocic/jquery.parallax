@@ -1,0 +1,19 @@
+{
+  "name": "jquery-parallax",
+  "version": "2.0.0",
+  "description": "jQuery library for generating beautiful parallax scrolling effect.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Djordje Jocic",
+  "license": "MIT",
+  "dependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0"
+  }
+}

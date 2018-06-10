@@ -78,7 +78,7 @@ JS - Setup
 $("#my-parallax").parallax({
     image : "./demo/img/1.jpg",
     height : "400",
-    scroll : "default"
+    scroll : "manual"
 });
 ```
 
