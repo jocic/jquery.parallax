@@ -2,6 +2,8 @@
 
 jQuery parallax scrolling library with image preloader and custom scroll function (for those that use custom content scrollers).
 
+[![Buy Me Coffee](assets/img/buy-me-coffee.png)](https://www.paypal.me/DjordjeJocic)
+
 # Versioning Scheme
 
 I use a 3-digit version identifier, for example 1.0.1. These digits have the following meaning:
@@ -98,7 +100,7 @@ Default Theme Example:
 <div id="example" class="parallax parallax-default"></div>
 ```
 
-![Default Theme](demo/img/themes/theme-default.gif)
+![Default Theme](demo/images/themes/default.gif)
 
 * .parallax-dark - main color: #111111
 
@@ -108,7 +110,7 @@ Dark Theme Example:
 <div id="example" class="parallax parallax-dark"></div>
 ```
 
-![Dark Theme](demo/img/themes/theme-dark.gif)
+![Dark Theme](demo/images/themes/dark.gif)
 
 * .parallax-light - main color: #ffffff
 
@@ -118,7 +120,7 @@ Light Theme Example:
 <div id="example" class="parallax parallax-light"></div>
 ```
 
-![Light Theme](demo/img/themes/theme-light.gif)
+![Light Theme](demo/images/themes/light.gif)
 
 # Settings
 
@@ -126,14 +128,14 @@ Default library settings are as follow.
 
 ```js
 var settings = {
-    image : "./demo/img/1.jpg",
+    image : "",
     height : "400",
     scroll : "default"
 };
 ```
 
-Allowed values are as follow:
+Allowed parameters are as follow:
 
 * image - String containing image location
-* height - Number containing the needed height, ex. *400* for 400px
+* height - Number representing required height of the parallax window.
 * scroll - String with value *default* for regular scroller or *manual* for custom scroller
