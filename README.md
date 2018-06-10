@@ -2,7 +2,7 @@
 
 jQuery parallax scrolling library with image preloader and custom scroll function (for those that use custom content scrollers).
 
-[![Buy Me Coffee](assets/img/buy-me-coffee.png)](https://www.paypal.me/DjordjeJocic)
+[![Buy Me Coffee](demo/images/buy-me-coffee.png)](https://www.paypal.me/DjordjeJocic)
 
 # Versioning Scheme
 
