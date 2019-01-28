@@ -4,15 +4,19 @@ jQuery parallax scrolling library with image preloader and custom scroll functio
 
 [![Buy Me Coffee](demo/images/buy-me-coffee.png)](https://www.paypal.me/DjordjeJocic)
 
-# Versioning Scheme
+**Song of the project:** [Joe Satriani - Surfing with the Alien](https://www.youtube.com/watch?v=d_0khAAItqg)
 
-I use a 3-digit version identifier, for example 1.0.1. These digits have the following meaning:
+## Versioning Scheme
 
-* The first digit (1) specifies the major version number.
-* The second digit (0) specifies the minor version number.
-* The third digit (1) specifies the patch version number.
+I use a 3-digit [Semantic Versioning](https://semver.org/spec/v2.0.0.html) identifier, for example 1.0.2. These digits have the following meaning:
 
-# Examples
+*   The first digit (1) specifies the MAJOR version number.
+*   The second digit (0) specifies the MINOR version number.
+*   The third digit (2) specifies the PATCH version number.
+
+Complete documentation can be found by following the link above.
+
+## Examples
 
 Before using the library you have to upload the files from the "src" folder to your server and add the library to your project.
 
@@ -23,7 +27,7 @@ Before using the library you have to upload the files from the "src" folder to y
 
 Be sure to check out the demo if you are confused.
 
-## Example 1 - Without Parameters
+### Example 1 - Without Parameters
 
 CSS
 
@@ -46,7 +50,7 @@ JS
 $("#my-parallax").parallax();
 ```
 
-## Example 2 - With Parameters
+### Example 2 - With Parameters
 
 HTML
 
@@ -64,7 +68,7 @@ $("#my-parallax").parallax({
 });
 ```
 
-## Example 3 - With Parameters & Manual Scroll
+### Example 3 - With Parameters & Manual Scroll
 
 HTML
 
@@ -88,7 +92,7 @@ JS - Manual Scroll
 $("#my-parallax").parallaxScroll(scrollPosition);
 ```
 
-# Themes
+## Themes
 
 Three themes exist:
 
@@ -122,7 +126,7 @@ Light Theme Example:
 
 ![Light Theme](demo/images/themes/light.gif)
 
-# Settings
+## Settings
 
 Default library settings are as follow.
 
@@ -139,3 +143,32 @@ Allowed parameters are as follow:
 * image - String containing image location
 * height - Number representing required height of the parallax window.
 * scroll - String with value *default* for regular scroller or *manual* for custom scroller
+
+## Contribution
+
+Please review the following documents if you are planning to contribute to the project:
+
+*   [Contributor Covenant Code of Conduct](code-of-conduct.md)
+*   [Contribution Guidelines](contributing.md)
+*   [Pull Request Template](pull-request-template.md)
+*   [MIT License](license.md)
+
+## Integration
+
+My hourly rate is fairly reasonable so, if you need help with integrating **Parallax** to your existing project, feel free to contact me via the email address below.
+
+Integration inquiries: [office@djordjejocic.com](mailto:office@djordjejocic.com)
+
+## Support
+
+Please don't hesitate to contact me if you have any questions, ideas, or concerns.
+
+My Twitter account is: [@jocic_91](https://www.twitter.com/jocic_91)
+
+My support E-Mail address is: [support@djordjejocic.com](mailto:support@djordjejocic.com)
+
+## Copyright & License
+
+Copyright (C) 2016 Đorđe Jocić
+
+Licensed under the MIT license.
